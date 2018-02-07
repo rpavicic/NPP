@@ -8,11 +8,16 @@ using System.Threading.Tasks;
 
 namespace NPP.DbCtxt
 {
-    public class PrintViewerDbContext:DbContext
+    public class PrintViewerContext:DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Printer> Printers { get; set; }
         public DbSet<PrintJob> PrintJobs { get; set; }
         public DbSet<Computer> ComputerNames { get; set; }
+
+        public PrintViewerContext()
+        {
+
+        }
     }
 }
