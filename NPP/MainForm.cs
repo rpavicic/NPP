@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NPP.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace NPP
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private IRepository _repository;
+
+        public MainForm(IRepository repository)
         {
             InitializeComponent();
+            _repository = repository;
         }
     }
 }

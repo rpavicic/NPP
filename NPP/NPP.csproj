@@ -67,6 +67,14 @@
     <Compile Include="Migrations\201802072115510_ChangeDuplexAndGrayscaleType2BoolInPrintJobsTable.Designer.cs">
       <DependentUpon>201802072115510_ChangeDuplexAndGrayscaleType2BoolInPrintJobsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802072235137_ChangeComputerName2ComputersTableComputerNames.cs" />
+    <Compile Include="Migrations\201802072235137_ChangeComputerName2ComputersTableComputerNames.Designer.cs">
+      <DependentUpon>201802072235137_ChangeComputerName2ComputersTableComputerNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802072236552_ChangeComputerName2ComputerTableComputer.cs" />
+    <Compile Include="Migrations\201802072236552_ChangeComputerName2ComputerTableComputer.Designer.cs">
+      <DependentUpon>201802072236552_ChangeComputerName2ComputerTableComputer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Computer.cs" />
     <Compile Include="Model\Printer.cs" />
@@ -84,6 +92,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802072115510_ChangeDuplexAndGrayscaleType2BoolInPrintJobsTable.resx">
       <DependentUpon>201802072115510_ChangeDuplexAndGrayscaleType2BoolInPrintJobsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802072235137_ChangeComputerName2ComputersTableComputerNames.resx">
+      <DependentUpon>201802072235137_ChangeComputerName2ComputersTableComputerNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802072236552_ChangeComputerName2ComputerTableComputer.resx">
+      <DependentUpon>201802072236552_ChangeComputerName2ComputerTableComputer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

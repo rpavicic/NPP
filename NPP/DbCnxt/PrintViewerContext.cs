@@ -13,7 +13,7 @@ namespace NPP.DbCnxt
         public DbSet<User> Users { get; set; }
         public DbSet<Printer> Printers { get; set; }
         public DbSet<PrintJob> PrintJobs { get; set; }
-        public DbSet<Computer> ComputerNames { get; set; }
+        public DbSet<Computer> Computers { get; set; }
 
         public PrintViewerContext()
         {
