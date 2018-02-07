@@ -5,14 +5,14 @@ namespace NPP.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<NPP.DbCtxt.PrintViewerContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<NPP.DbCnxt.PrintViewerContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(NPP.DbCtxt.PrintViewerContext context)
+        protected override void Seed(NPP.DbCnxt.PrintViewerContext context)
         {
             //  This method will be called after migrating to the latest version.
 

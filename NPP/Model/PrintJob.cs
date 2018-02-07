@@ -20,8 +20,8 @@ namespace NPP.Model
         public string PrintLanguage { get; set; }
         public string Height { get; set; }
         public string Width { get; set; }
-        public string Duplex { get; set; }
-        public string Grayscale { get; set; }
+        public bool Duplex { get; set; }
+        public bool Grayscale { get; set; }
         public string DocumentSize { get; set; }
     }
 }

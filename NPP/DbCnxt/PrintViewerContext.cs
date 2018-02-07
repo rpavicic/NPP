@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NPP.DbCtxt
+namespace NPP.DbCnxt
 {
     public class PrintViewerContext:DbContext
     {
