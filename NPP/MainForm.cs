@@ -96,7 +96,7 @@ namespace NPP
                     computerrObj = new Computer { Name = computer };
                 }
 
-                PrintJob prinJob = new PrintJob(fieldDate, user, pages, copies, printerObj, document, computerrObj, paperSize,
+                PrintJob printJob = new PrintJob(fieldDate, user, pages, copies, printerObj, document, computerrObj, paperSize,
                     printLanguage, height, width, duplex, grayscale, documentSize);
             }
             catch (Exception)
