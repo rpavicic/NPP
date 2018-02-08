@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NPP.DbCnxt;
+using NPP.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,11 @@ namespace NPP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            using (PrintViewerContext cntx = new PrintViewerContext())
+            {
+                IRepository repository = new CntxRepository(cntx);
+                Application.Run(new MainForm(repository));
+            }
         }
     }
 }

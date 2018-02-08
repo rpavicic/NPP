@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace NPP.Repository
 {
-    public class Repository:IRepository
+    public class CntxRepository:IRepository
     {
         private PrintViewerContext _cntx;
 
-        public Repository(PrintViewerContext cntx)
+        public CntxRepository(PrintViewerContext cntx)
         {
             _cntx = cntx;
         }
