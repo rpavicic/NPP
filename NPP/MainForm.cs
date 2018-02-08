@@ -34,7 +34,6 @@ namespace NPP
         }
 
         [TimingAspect]
-        [LogAspect]
         private void LoadFile2Db(string fileUtf8)
         {
             try
@@ -54,10 +53,9 @@ namespace NPP
                 }
                 File.Delete(fileUtf8);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                throw;
+                MessageBox.Show(e.StackTrace, "Neš' ne radi kako bi trebalo...!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -81,8 +79,6 @@ namespace NPP
                 bool duplex = (lineSplit[11].Equals("DUPLEX")) ? true : false;
                 bool grayscale = (lineSplit[12].Equals("GRAYSCALE")) ? true : false;
                 string documentSize = lineSplit[13];
-
-                lblInfo.Text = fieldDate.ToString();
 
                 User user = _repository.GetUserByUid(uid);
                 if (user == null)
@@ -111,9 +107,9 @@ namespace NPP
                 _repository.AddPrintJob(printJob);
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                MessageBox.Show(e.StackTrace, "Neš' ne radi kako bi trebalo...!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -131,9 +127,9 @@ namespace NPP
                 }
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                MessageBox.Show(e.StackTrace, "Neš' ne radi kako bi trebalo...!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

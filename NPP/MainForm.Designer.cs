@@ -35,7 +35,7 @@
             // 
             this.btnLoadFile.Location = new System.Drawing.Point(13, 13);
             this.btnLoadFile.Name = "btnLoadFile";
-            this.btnLoadFile.Size = new System.Drawing.Size(165, 23);
+            this.btnLoadFile.Size = new System.Drawing.Size(197, 49);
             this.btnLoadFile.TabIndex = 0;
             this.btnLoadFile.Text = "Učitaj iz datoteke u bazu";
             this.btnLoadFile.UseVisualStyleBackColor = true;
