@@ -78,7 +78,26 @@ namespace NPP
                 bool grayscale = (lineSplit[12].Equals("GRAYSCALE")) ? true : false;
                 string documentSize = lineSplit[13];
 
-                
+                User user = _repository.GetUserByUid(uid);
+                if (user == null)
+                {
+                    user = new User { Uid = uid };
+                }
+
+                Printer printerObj = _repository.GetPrinterByName(printer);
+                if (printerObj == null)
+                {
+                    printerObj = new Printer { Name = printer };
+                }
+
+                Computer computerrObj = _repository.GetComputerByName(computer);
+                if (computerrObj == null)
+                {
+                    computerrObj = new Computer { Name = computer };
+                }
+
+                PrintJob prinJob = new PrintJob(fieldDate, user, pages, copies, printerObj, document, computerrObj, paperSize,
+                    printLanguage, height, width, duplex, grayscale, documentSize);
             }
             catch (Exception)
             {
