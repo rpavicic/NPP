@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aspects\LogAspect.cs" />
+    <Compile Include="Aspects\TimingAspect.cs" />
     <Compile Include="DbCnxt\PrintViewerContext.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

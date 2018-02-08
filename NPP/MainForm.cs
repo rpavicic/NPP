@@ -33,6 +33,7 @@ namespace NPP
 
         }
 
+        [TimingAspect]
         [LogAspect]
         private void LoadFile2Db(string fileUtf8)
         {
