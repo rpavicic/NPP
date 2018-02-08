@@ -17,6 +17,5 @@ namespace NPP.Repository
         void AddComputer(Computer computer);
         void AddPrintJob(PrintJob printJob);
 
-
     }
 }
