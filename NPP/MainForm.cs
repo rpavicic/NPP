@@ -1,4 +1,5 @@
-﻿using NPP.Model;
+﻿using NPP.Aspects;
+using NPP.Model;
 using NPP.Repository;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,7 @@ namespace NPP
 
         }
 
+        [LogAspect]
         private void LoadFile2Db(string fileUtf8)
         {
             try
@@ -58,6 +60,7 @@ namespace NPP
             }
         }
 
+        [LogAspect]
         private void AddLine2Db(string line)
         {
             string[] lineSplit = line.Split(',');
@@ -113,6 +116,7 @@ namespace NPP
             }
         }
 
+        [LogAspect]
         private void ConvertWinCp2Utf8(string csvFile, string fileUtf8)
         {
             try

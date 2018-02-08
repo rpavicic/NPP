@@ -30,6 +30,7 @@
         {
             this.btnLoadFile = new System.Windows.Forms.Button();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.rTxtBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // btnLoadFile
@@ -51,11 +52,20 @@
             this.lblInfo.TabIndex = 1;
             this.lblInfo.Text = "label1";
             // 
+            // rTxtBox
+            // 
+            this.rTxtBox.Location = new System.Drawing.Point(39, 163);
+            this.rTxtBox.Name = "rTxtBox";
+            this.rTxtBox.Size = new System.Drawing.Size(734, 355);
+            this.rTxtBox.TabIndex = 2;
+            this.rTxtBox.Text = "";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 761);
+            this.Controls.Add(this.rTxtBox);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnLoadFile);
             this.Name = "MainForm";
@@ -69,6 +79,7 @@
 
         private System.Windows.Forms.Button btnLoadFile;
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.RichTextBox rTxtBox;
     }
 }
 
