@@ -75,6 +75,22 @@
     <Compile Include="Migrations\201802072236552_ChangeComputerName2ComputerTableComputer.Designer.cs">
       <DependentUpon>201802072236552_ChangeComputerName2ComputerTableComputer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802082003308_Changedmodel.cs" />
+    <Compile Include="Migrations\201802082003308_Changedmodel.Designer.cs">
+      <DependentUpon>201802082003308_Changedmodel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802082007030_ChangedmodelAgain.cs" />
+    <Compile Include="Migrations\201802082007030_ChangedmodelAgain.Designer.cs">
+      <DependentUpon>201802082007030_ChangedmodelAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802082032306_ChangedModelPrinJobTable.cs" />
+    <Compile Include="Migrations\201802082032306_ChangedModelPrinJobTable.Designer.cs">
+      <DependentUpon>201802082032306_ChangedModelPrinJobTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802082056523_ChangedModelAddDateTimePrintJobTable.cs" />
+    <Compile Include="Migrations\201802082056523_ChangedModelAddDateTimePrintJobTable.Designer.cs">
+      <DependentUpon>201802082056523_ChangedModelAddDateTimePrintJobTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Computer.cs" />
     <Compile Include="Model\Printer.cs" />
@@ -98,6 +114,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802072236552_ChangeComputerName2ComputerTableComputer.resx">
       <DependentUpon>201802072236552_ChangeComputerName2ComputerTableComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802082003308_Changedmodel.resx">
+      <DependentUpon>201802082003308_Changedmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802082007030_ChangedmodelAgain.resx">
+      <DependentUpon>201802082007030_ChangedmodelAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802082032306_ChangedModelPrinJobTable.resx">
+      <DependentUpon>201802082032306_ChangedModelPrinJobTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802082056523_ChangedModelAddDateTimePrintJobTable.resx">
+      <DependentUpon>201802082056523_ChangedModelAddDateTimePrintJobTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

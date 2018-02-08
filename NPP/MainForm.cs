@@ -68,7 +68,7 @@ namespace NPP
                 int pages = int.Parse(lineSplit[2]);
                 int copies = int.Parse(lineSplit[3]);
                 string printer = lineSplit[4];
-                string document = lineSplit[5];
+                string document = lineSplit[5].Trim(new char[] { '"' });
                 string computer = lineSplit[6];
                 string paperSize = lineSplit[7];
                 string printLanguage = lineSplit[8];
@@ -78,32 +78,39 @@ namespace NPP
                 bool grayscale = (lineSplit[12].Equals("GRAYSCALE")) ? true : false;
                 string documentSize = lineSplit[13];
 
+                lblInfo.Text = fieldDate.ToString();
+
                 User user = _repository.GetUserByUid(uid);
                 if (user == null)
                 {
                     user = new User { Uid = uid };
+                    _repository.AddUser(user);
                 }
 
                 Printer printerObj = _repository.GetPrinterByName(printer);
                 if (printerObj == null)
                 {
                     printerObj = new Printer { Name = printer };
+                    _repository.AddPrinter(printerObj);
                 }
 
-                Computer computerrObj = _repository.GetComputerByName(computer);
-                if (computerrObj == null)
+                Computer computerObj = _repository.GetComputerByName(computer);
+                if (computerObj == null)
                 {
-                    computerrObj = new Computer { Name = computer };
+                    computerObj = new Computer { Name = computer };
+                    _repository.AddComputer(computerObj);
                 }
 
-                PrintJob printJob = new PrintJob(fieldDate, user, pages, copies, printerObj, document, computerrObj, paperSize,
+                PrintJob printJob = new PrintJob(user, pages, copies, printerObj, document, computerObj, paperSize,
                     printLanguage, height, width, duplex, grayscale, documentSize);
+
+                _repository.AddPrintJob(printJob);
+
             }
             catch (Exception)
             {
                 throw;
             }
-            //_repository.AddComputer(new Model.Computer)
         }
 
         private void ConvertWinCp2Utf8(string csvFile, string fileUtf8)

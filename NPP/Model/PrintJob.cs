@@ -8,20 +8,20 @@ namespace NPP.Model
 {
     public class PrintJob
     {
-        private DateTime fieldDate;
-        private Printer printerObj;
-        private string document;
-        private Computer computerrObj;
+        /*private DateTime fieldDate;
+private Printer printerObj;
+private string document;
+private Computer computerrObj;*/
 
-        public PrintJob(DateTime fieldDate, User user, int pages, int copies, Printer printerObj, string document, Computer computerrObj, string paperSize, string printLanguage, string height, string width, bool duplex, bool grayscale, string documentSize)
+        public PrintJob(User user, int pages, int copies, Printer printerObj, string document, Computer computerrObj, string paperSize, string printLanguage, string height, string width, bool duplex, bool grayscale, string documentSize)
         {
-            this.fieldDate = fieldDate;
+            //Time = fieldDate;
             User = user;
             Pages = pages;
             Copies = copies;
-            this.printerObj = printerObj;
-            this.document = document;
-            this.computerrObj = computerrObj;
+            Printer = printerObj;
+            DocumentName = document;
+            Computer = computerrObj;
             PaperSize = paperSize;
             PrintLanguage = printLanguage;
             Height = height;
@@ -32,7 +32,7 @@ namespace NPP.Model
         }
 
         public int Id { get; set; }
-        public DateTime Time { get; set; }
+        //DateTime Time { get; set; }
         public User User { get; set; }
         public int Pages { get; set; }
         public int Copies { get; set; }
