@@ -30,6 +30,8 @@
         {
             this.btnLoadFile = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.dgView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgView)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLoadFile
@@ -50,15 +52,25 @@
             this.lblStatus.Size = new System.Drawing.Size(0, 13);
             this.lblStatus.TabIndex = 1;
             // 
+            // dgView
+            // 
+            this.dgView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgView.Location = new System.Drawing.Point(16, 117);
+            this.dgView.Name = "dgView";
+            this.dgView.Size = new System.Drawing.Size(1236, 632);
+            this.dgView.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 761);
+            this.Controls.Add(this.dgView);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnLoadFile);
             this.Name = "MainForm";
             this.Text = "Printing viewer";
+            ((System.ComponentModel.ISupportInitialize)(this.dgView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,6 +80,7 @@
 
         private System.Windows.Forms.Button btnLoadFile;
         private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.DataGridView dgView;
     }
 }
 

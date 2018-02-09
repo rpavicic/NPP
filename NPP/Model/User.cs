@@ -10,5 +10,10 @@ namespace NPP.Model
     {
         public int Id { get; set; }
         public string Uid { get; set; }
+
+        public override string ToString()
+        {
+            return Uid;
+        }
     }
 }

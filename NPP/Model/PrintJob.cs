@@ -12,6 +12,10 @@ namespace NPP.Model
 private Printer printerObj;
 private string document;
 private Computer computerrObj;*/
+        public PrintJob()
+        {
+
+        }
 
         public PrintJob(User user, int pages, int copies, Printer printerObj, string document, Computer computerrObj, string paperSize, string printLanguage, string height, string width, bool duplex, bool grayscale, string documentSize)
         {

@@ -35,6 +35,12 @@ namespace NPP
             LoadFile2Db(FileUtf8);
             lblStatus.ForeColor = Color.Green;
             lblStatus.Text = "Svi podaci su učitani!";
+            LoaddgViewFromDb();
+        }
+
+        private void LoaddgViewFromDb()
+        {
+            dgView.DataSource = _repository.GetAllPrinJobs();
         }
 
         [TimingAspect]

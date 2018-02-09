@@ -58,5 +58,11 @@ namespace NPP.Repository
             var user = _cntx.Users.Where(u => u.Uid.Equals(uid)).FirstOrDefault();
             return user;
         }
+
+        public List<PrintJob> GetAllPrinJobs()
+        {
+            var lista = _cntx.PrintJobs.ToList();
+            return lista;
+        }
     }
 }
