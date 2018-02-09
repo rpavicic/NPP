@@ -17,7 +17,7 @@ namespace NPP
     public partial class MainForm : Form
     {
         private IRepository _repository;
-        private string _csvFile = "papercut-print-log-all-time.csv";
+        private string _csvFile = "../../Files/papercut-print-log-all-time.csv";
 
         public MainForm(IRepository repository)
         {
@@ -27,10 +27,14 @@ namespace NPP
 
         private void btnLoadFile_Click(object sender, EventArgs e)
         {
-            string FileUtf8 = "PrintLogUTF8.txt";
+            string FileUtf8 = "../../Files/PrintLogUTF8.txt";
+            lblStatus.ForeColor = Color.Red;
+            lblStatus.Text = "Konvertiram ulaz u UTF-8...";
             ConvertWinCp2Utf8(_csvFile, FileUtf8);
+            lblStatus.Text = "Učitavam podatke iz datoteke u bazu...";
             LoadFile2Db(FileUtf8);
-
+            lblStatus.ForeColor = Color.Green;
+            lblStatus.Text = "Svi podaci su učitani!";
         }
 
         [TimingAspect]
