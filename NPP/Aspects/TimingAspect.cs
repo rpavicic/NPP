@@ -16,14 +16,14 @@ namespace NPP.Aspects
         [NonSerialized]
         Stopwatch _StopWatch;
 
-        public override void OnEntry(PostSharp.Aspects.MethodExecutionArgs args)
+        public override sealed void OnEntry(PostSharp.Aspects.MethodExecutionArgs args)
         {
             _StopWatch = Stopwatch.StartNew();
 
             base.OnEntry(args);
         }
 
-        public override void OnExit(PostSharp.Aspects.MethodExecutionArgs args)
+        public override sealed void OnExit(PostSharp.Aspects.MethodExecutionArgs args)
         {
             Debug.WriteLine(string.Format("[{0}] took {1}ms to execute",
               new StackTrace().GetFrame(1).GetMethod().Name,

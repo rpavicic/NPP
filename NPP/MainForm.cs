@@ -27,15 +27,20 @@ namespace NPP
 
         private void btnLoadFile_Click(object sender, EventArgs e)
         {
+            LoadFromFileToDb();
+            LoaddgViewFromDb();
+        }
+
+        private void LoadFromFileToDb()
+        {
             string FileUtf8 = "../../Files/PrintLogUTF8.txt";
             lblStatus.ForeColor = Color.Red;
             lblStatus.Text = "Konvertiram ulaz u UTF-8...";
             ConvertWinCp2Utf8(_csvFile, FileUtf8);
             lblStatus.Text = "Učitavam podatke iz datoteke u bazu...";
-            LoadFile2Db(FileUtf8);
+            LoadUtf2Db(FileUtf8);
             lblStatus.ForeColor = Color.Green;
             lblStatus.Text = "Svi podaci su učitani!";
-            LoaddgViewFromDb();
         }
 
         [TimingAspect]
@@ -45,7 +50,7 @@ namespace NPP
         }
 
         [TimingAspect]
-        private void LoadFile2Db(string fileUtf8)
+        private void LoadUtf2Db(string fileUtf8)
         {
             try
             {

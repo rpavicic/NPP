@@ -12,7 +12,7 @@ namespace NPP.Aspects
     [Serializable]
     public class LogAspect: OnMethodBoundaryAspect
     {
-        public override void OnEntry(MethodExecutionArgs args)
+        public override sealed void OnEntry(MethodExecutionArgs args)
         {
             Debug.WriteLine(Environment.NewLine);
             Debug.WriteLine("Entering method [ {0} ] ...", args.Method);
@@ -20,7 +20,7 @@ namespace NPP.Aspects
             base.OnEntry(args);
         }
 
-        public override void OnExit(MethodExecutionArgs args)
+        public override sealed void OnExit(MethodExecutionArgs args)
         {
             Debug.WriteLine("Leaving method [ {0} ] ...", args.Method);
 
