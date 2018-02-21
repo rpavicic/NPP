@@ -41,7 +41,7 @@ namespace NPP
         [TimingAspect]
         private void LoaddgViewFromDb()
         {
-            dgView.DataSource = _repository.GetAllPrinJobs();
+            dgView.DataSource = _repository.GetAllPrintJobs();
         }
 
         [TimingAspect]

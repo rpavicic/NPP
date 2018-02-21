@@ -59,7 +59,7 @@ namespace NPP.Repository
             return user;
         }
 
-        public List<PrintJob> GetAllPrinJobs()
+        public List<PrintJob> GetAllPrintJobs()
         {
             var lista = _cntx.PrintJobs.ToList();
             return lista;
