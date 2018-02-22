@@ -32,7 +32,7 @@ namespace NPP
         {
             dgViewUsers.DataSource = _repository.GetAllUsers();
             dgViewUsers.Columns[0].ReadOnly = true;
-            //dgViewUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgViewUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void dgViewUsers_CellEndEdit(object sender, DataGridViewCellEventArgs e)
