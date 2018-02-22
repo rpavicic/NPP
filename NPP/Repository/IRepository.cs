@@ -17,5 +17,11 @@ namespace NPP.Repository
         void AddComputer(Computer computer);
         void AddPrintJob(PrintJob printJob);
         List<PrintJob> GetAllPrintJobs();
+        List<User> GetAllUsers();
+        void EditUser(User user);
+        List<Computer> GetAllComputers();
+        void EditComputer(Computer comp);
+        List<Printer> GetAllPrinters();
+        void EditPrinter(Printer printer);
     }
 }

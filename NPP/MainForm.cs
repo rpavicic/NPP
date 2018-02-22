@@ -25,6 +25,11 @@ namespace NPP
             _repository = repository;
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LoaddgViewFromDb();
+        }
+
         private void btnLoadFile_Click(object sender, EventArgs e)
         {
             LoadFromFileToDb();
@@ -153,17 +158,20 @@ namespace NPP
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-
+            UsersForm usersForm = new UsersForm(_repository);
+            usersForm.ShowDialog();
         }
 
         private void btnComputers_Click(object sender, EventArgs e)
         {
-
+            ComputersForm computersForm = new ComputersForm(_repository);
+            computersForm.ShowDialog();
         }
 
         private void btnPrinters_Click(object sender, EventArgs e)
         {
-
+            PrintersForm printersForm = new PrintersForm(_repository);
+            printersForm.ShowDialog();
         }
     }
 }

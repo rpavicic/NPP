@@ -15,6 +15,7 @@ namespace NPP.DbCnxt
         public DbSet<PrintJob> PrintJobs { get; set; }
         public DbSet<Computer> Computers { get; set; }
 
+        //public PrintViewerContext(string cs) : base(cs)
         public PrintViewerContext()
         {
 

@@ -35,14 +35,15 @@ private Computer computerrObj;*/
             DocumentSize = documentSize;
         }
 
+        
         public int Id { get; set; }
         //DateTime Time { get; set; }
-        public User User { get; set; }
+        public virtual User User { get; set; }
         public int Pages { get; set; }
         public int Copies { get; set; }
-        public Printer Printer { get; set; }
+        public virtual Printer Printer { get; set; }
         public string DocumentName { get; set; }
-        public Computer Computer { get; set; }
+        public virtual Computer Computer { get; set; }
         public string PaperSize { get; set; }
         public string PrintLanguage { get; set; }
         public string Height { get; set; }

@@ -104,8 +104,10 @@
             this.Controls.Add(this.dgView);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnLoadFile);
+            this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.Text = "Printing viewer";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

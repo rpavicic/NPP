@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using PostSharp;
 using PostSharp.Aspects;
 using System.Diagnostics;
+using NPP.Utils;
 
 namespace NPP.Aspects
 {
@@ -14,15 +15,14 @@ namespace NPP.Aspects
     {
         public override sealed void OnEntry(MethodExecutionArgs args)
         {
-            Debug.WriteLine(Environment.NewLine);
-            Debug.WriteLine("Entering method [ {0} ] ...", args.Method);
+            Logger.Instance.Info(String.Format("Entering method [ {0} ] ...", args.Method));
 
             base.OnEntry(args);
         }
 
         public override sealed void OnExit(MethodExecutionArgs args)
         {
-            Debug.WriteLine("Leaving method [ {0} ] ...", args.Method);
+            Logger.Instance.Info(String.Format("Leaving method [ {0} ] ...", args.Method));
 
             base.OnExit(args);
         }
