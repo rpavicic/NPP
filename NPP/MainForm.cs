@@ -47,6 +47,7 @@ namespace NPP
         private void LoaddgViewFromDb()
         {
             dgView.DataSource = _repository.GetAllPrintJobs();
+            dgView.ReadOnly = true;
         }
 
         [TimingAspect]
@@ -147,6 +148,21 @@ namespace NPP
             {
                 MessageBox.Show(e.StackTrace, "Neš' ne radi kako bi trebalo...!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnComputers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrinters_Click(object sender, EventArgs e)
+        {
 
         }
     }

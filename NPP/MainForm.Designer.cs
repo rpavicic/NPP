@@ -31,6 +31,9 @@
             this.btnLoadFile = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
             this.dgView = new System.Windows.Forms.DataGridView();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnComputers = new System.Windows.Forms.Button();
+            this.btnPrinters = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,11 +63,44 @@
             this.dgView.Size = new System.Drawing.Size(1236, 632);
             this.dgView.TabIndex = 2;
             // 
+            // btnUsers
+            // 
+            this.btnUsers.Location = new System.Drawing.Point(216, 13);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(197, 49);
+            this.btnUsers.TabIndex = 3;
+            this.btnUsers.Text = "Korisnici";
+            this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            // 
+            // btnComputers
+            // 
+            this.btnComputers.Location = new System.Drawing.Point(419, 13);
+            this.btnComputers.Name = "btnComputers";
+            this.btnComputers.Size = new System.Drawing.Size(197, 49);
+            this.btnComputers.TabIndex = 4;
+            this.btnComputers.Text = "Računala";
+            this.btnComputers.UseVisualStyleBackColor = true;
+            this.btnComputers.Click += new System.EventHandler(this.btnComputers_Click);
+            // 
+            // btnPrinters
+            // 
+            this.btnPrinters.Location = new System.Drawing.Point(622, 13);
+            this.btnPrinters.Name = "btnPrinters";
+            this.btnPrinters.Size = new System.Drawing.Size(197, 49);
+            this.btnPrinters.TabIndex = 5;
+            this.btnPrinters.Text = "Pisači";
+            this.btnPrinters.UseVisualStyleBackColor = true;
+            this.btnPrinters.Click += new System.EventHandler(this.btnPrinters_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 761);
+            this.Controls.Add(this.btnPrinters);
+            this.Controls.Add(this.btnComputers);
+            this.Controls.Add(this.btnUsers);
             this.Controls.Add(this.dgView);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnLoadFile);
@@ -81,6 +117,9 @@
         private System.Windows.Forms.Button btnLoadFile;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.DataGridView dgView;
+        private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnComputers;
+        private System.Windows.Forms.Button btnPrinters;
     }
 }
 
