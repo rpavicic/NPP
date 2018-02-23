@@ -40,7 +40,7 @@
             this.dgViewPrinters.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgViewPrinters.Location = new System.Drawing.Point(0, 0);
             this.dgViewPrinters.Name = "dgViewPrinters";
-            this.dgViewPrinters.Size = new System.Drawing.Size(443, 788);
+            this.dgViewPrinters.Size = new System.Drawing.Size(434, 711);
             this.dgViewPrinters.TabIndex = 0;
             this.dgViewPrinters.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgViewPrinters_CellContentClick);
             // 
@@ -48,7 +48,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 788);
+            this.ClientSize = new System.Drawing.Size(434, 711);
             this.Controls.Add(this.dgViewPrinters);
             this.Name = "PrintersForm";
             this.Text = "PrintersForm";

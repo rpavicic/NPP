@@ -27,6 +27,7 @@ namespace NPP
         {
             dgViewPrinters.DataSource = _repository.GetAllPrinters();
             dgViewPrinters.Columns[0].ReadOnly = true;
+            dgViewPrinters.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void dgViewPrinters_CellContentClick(object sender, DataGridViewCellEventArgs e)

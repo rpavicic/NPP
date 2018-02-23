@@ -32,6 +32,7 @@ namespace NPP
         {
             dgViewComputers.DataSource = _repository.GetAllComputers();
             dgViewComputers.Columns[0].ReadOnly = true;
+            dgViewComputers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void dgViewComputers_CellEndEdit(object sender, DataGridViewCellEventArgs e)

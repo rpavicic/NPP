@@ -6,8 +6,8 @@ namespace NPP.Utils
     {
         public static ILogWriter GetLoggerWriter()
         {
-            var writer = ConfigurationManager.AppSettings["LoggerSetting"];
-            switch (writer)
+            var value = ConfigurationManager.AppSettings["LoggerSetting"];
+            switch (value)
             {
                 case "Debug":
                     return new DebugWriter();
